@@ -12,6 +12,7 @@ const SearchCard = () => {
       if (c.name.toLowerCase().includes(value)) {
         return c;
       }
+      return null;
     });
     setFoundCities(found);
   };
