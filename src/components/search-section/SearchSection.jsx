@@ -3,37 +3,27 @@ import React, { useState } from "react";
 import Search from "./Search.jsx";
 import FoundCitiesTable from "./FoundCitiesTable.jsx";
 
-import citiesList from "../../db/city.list.json";
+// import citiesList from "../../db/city.list.json";
 
 const SearchSection = () => {
   const [foundCities, setFoundCities] = useState([]);
 
   const onSearch = (value) => {
-    if (!value) {
-      setFoundCities([]);
-    } else {
-      const found = citiesList.filter((city) => {
-        if (city.name.toLowerCase().includes(value)) {
-          return city;
-        }
-        return null;
-      });
-      sortResults(found);
-    }
+    // if (!value) {
+    //   setFoundCities([]);
+    // } else {
+    //   const found = citiesList.filter((city) => {
+    //     if (city.name.toLowerCase().includes(value)) {
+    //       return city;
+    //     }
+    //     return null;
+    //   });
+    //   setFoundCities(sortResults(found));
+    // }
   };
 
   const sortResults = (results) => {
-    const sorted = results.sort((a, b) => {
-      if (a.name < b.name) {
-        return -1;
-      }
-      if (a.name > b.name) {
-        return 1;
-      }
-      return 0;
-    });
-
-    setFoundCities(sorted);
+    return results.sort((a, b) => (a.name < b.name ? -1 : 1));
   };
 
   return (

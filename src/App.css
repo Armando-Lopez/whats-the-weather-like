@@ -3,9 +3,20 @@ body {
   background-image: url("https://images.pexels.com/photos/2334/hill-meadow-tree-green.jpg?cs=srgb&dl=hill-meadow-tree-green-2334.jpg&fm=jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
 .found-table {
   max-height: 40vh;
   overflow-y: scroll;
+}
+
+.icon {
+  width: 100px;
+  image-rendering: pixelated;
+}
+
+.primary-info {
+  font-size: 2em;
+  text-transform: capitalize;
 }

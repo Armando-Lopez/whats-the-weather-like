@@ -13,7 +13,9 @@ function App() {
         <div className="row card-panel">
           <div className="col s12 m6">
             <Intro />
+          </div>
 
+          <div className="col s12">
             <div className="divider"></div>
           </div>
 
@@ -23,7 +25,7 @@ function App() {
                 <SearchSection />
               </Route>
 
-              <Route exact path="/weather/:lat/:lon">
+              <Route exact path="/weather/:city/:country/:lat/:lon">
                 <WeatherSection />
               </Route>
             </Switch>
