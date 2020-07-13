@@ -4,3 +4,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.found-table {
+  max-height: 40vh;
+  overflow-y: scroll;
+}

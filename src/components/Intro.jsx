@@ -11,7 +11,9 @@ const Intro = () => {
         width="50"
       />
       <h5>Whats the weather like?</h5>
-      <p>Conoce el clima al rededor del mundo</p>
+      <p>
+        Conoce los pronosticos del tiempo al rededor del mundo en tiempo real
+      </p>
     </>
   );
 };
