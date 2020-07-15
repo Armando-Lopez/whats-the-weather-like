@@ -13,6 +13,8 @@ body {
 
 .arrow_back {
   font-size: 3em;
+  position: absolute;
+  left: 0;
 }
 
 .weather-info {
