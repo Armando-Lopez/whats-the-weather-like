@@ -1,15 +1,44 @@
 import React from "react";
 import Icon from "./Icon.jsx";
 
-const PrimaryInfo = ({ city, country, icon, temp, description }) => {
+const Cloud = ({ delay }) => {
+  const style = {
+    top: `${Math.random() * 100}%`,
+    animationDelay: `${delay}s`,
+  };
+  return (
+    <i className="material-icons cloud" style={style}>
+      cloud
+    </i>
+  );
+};
+
+const PrimaryInfo = ({
+  city,
+  country,
+  icon,
+  temp,
+  main,
+  description,
+  clouds,
+}) => {
   return (
     <>
-      <h5>
-        {city},{country}
-      </h5>
-      <Icon icon={icon} />
-      <h4>{temp}°C</h4>
-      <p className="primary-info">{description}</p>
+      <div className="content">
+        <h5>
+          {city},{country}
+        </h5>
+        <h4>{temp.toFixed(1)}°C</h4>
+        <Icon icon={icon} />
+        <p className="description">
+          {main}
+          <br />
+          {description}
+        </p>
+      </div>
+      {[...Array(Math.ceil(clouds))].map((item, i) => {
+        return <Cloud key={i} delay={i} />;
+      })}
     </>
   );
 };

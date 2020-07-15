@@ -11,12 +11,83 @@ body {
   overflow-y: scroll;
 }
 
-.icon {
-  width: 100px;
-  image-rendering: pixelated;
+.arrow_back {
+  font-size: 3em;
+}
+
+.weather-info {
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
 }
 
 .primary-info {
+  position: relative;
+}
+
+.primary-info .icon {
+  image-rendering: pixelated;
+  margin: 0;
+  transform: scale(2.2);
+  transition: all 1s;
+}
+
+.primary-info .description {
   font-size: 2em;
   text-transform: capitalize;
+  margin-top: 0;
+}
+
+.primary-info .content {
+  position: relative;
+  z-index: 10;
+}
+.primary-info .cloud {
+  color: whitesmoke;
+  position: absolute;
+  left: 100%;
+  z-index: 0;
+  animation: animateCloud 15s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+@keyframes animateCloud {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -10%;
+  }
+}
+
+/*  */
+
+.more-info {
+  transition: all 1.5s;
+  border-radius: 40% 40% 0 0 / 10%;
+
+  animation: animate_shadow 5s alternate infinite backwards;
+}
+
+@keyframes animate_shadow {
+  from {
+    box-shadow: 0 -1px 5px rgba(255, 255, 255, 0.808),
+      0 -5px 0px 15px rgba(255, 255, 255, 0.5),
+      0 -5px 0px 25px rgba(255, 255, 255, 0.281),
+      0 -5px 0px 0 rgba(255, 255, 255, 0.164);
+  }
+  to {
+    box-shadow: 0 -1px 0px rgba(255, 255, 255, 0.808),
+      0 -5px 0px 0px rgba(255, 255, 255, 0.5),
+      0 -5px 0px 20px rgba(255, 255, 255, 0.281),
+      0 -5px 10px 34px rgba(255, 255, 255, 0.192);
+  }
+}
+
+@media all and (min-width: 600px) {
+  .more-info {
+    position: absolute;
+    right: 0% !important;
+    height: 100%;
+    border-radius: 10% 0 0 10% / 40%;
+  }
 }

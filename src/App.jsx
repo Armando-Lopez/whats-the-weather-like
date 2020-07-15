@@ -15,19 +15,15 @@ function App() {
             <Intro />
           </div>
 
-          <div className="col s12">
-            <div className="divider"></div>
-          </div>
-
           <Router>
             <Switch>
-              <Route exact path="/">
-                <SearchSection />
-              </Route>
+              <Route exact path="/" component={SearchSection} />
 
-              <Route exact path="/weather/:city/:country/:lat/:lon">
-                <WeatherSection />
-              </Route>
+              <Route
+                exact
+                path="/weather/:city/:country/:lat/:lon"
+                component={WeatherSection}
+              />
             </Switch>
           </Router>
         </div>
