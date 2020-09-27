@@ -12,7 +12,7 @@ const Search = ({ onSearch }) => {
 
   return (
     <div className="center-align green-text darken-4 accent-4">
-      <h6>Buscar Cuidad</h6>
+      <h6>Buscar Ciudad</h6>
       <div className="input-field">
         <i className="material-icons prefix green-text darken-3">place</i>
         <input type="text" onChange={handleInput} />
